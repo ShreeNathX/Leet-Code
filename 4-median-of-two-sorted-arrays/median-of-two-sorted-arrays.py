@@ -3,9 +3,8 @@ class Solution:
         nums = nums1 + nums2
         nums.sort()
         n = len(nums)
-
         if n % 2 == 0:
-            median = (nums[n//2] + nums[n//2 -1])/2
+            median = (nums[n//2] + nums[n//2-1])/2
         else:
             median = nums[n//2]
         
