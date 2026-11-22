@@ -1,7 +1,11 @@
 class Solution:
     def singleNumber(self, nums: list[int]) -> int:
-        ans = 0
-        for num in nums:
-            ans ^= num
+        m = defaultdict(int)
+        for val in nums:
+            m[val] += 1
         
-        return ans
+        for key, val in m.items():
+            if val == 1:
+                return key
+        
+        return -1
