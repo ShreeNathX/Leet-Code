@@ -1,5 +1,6 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        # Using Hasmap
         m = defaultdict(int)
         
         for i, val in enumerate(nums):
