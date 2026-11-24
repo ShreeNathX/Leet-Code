@@ -1,12 +1,11 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        # Using Hasmap
-        m = defaultdict(int)
-        
-        for i, val in enumerate(nums):
+        dic = defaultdict(int)
+
+        for idx, val in enumerate(nums):
             temp = target - val
 
-            if temp in m:
-                return [m[temp], i]
+            if temp in dic:
+                return [dic[temp], idx]
             
-            m[val] = i
+            dic[val] = idx
